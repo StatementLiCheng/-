@@ -1,0 +1,43 @@
+<!--pages/logs_Bio_find/logs_Bio_find.wxml-->
+<!-- 我的发现页面 -->
+<view class="pages">
+  <view class="header">
+    <view class="header_top">
+      <view class="heder_img"></view>
+      <view class="heder_name">
+          <text>欧阳紫薇1728</text>
+          <text>软件工程-22届</text>
+          <van-icon name="arrow" color="rgb(119, 119, 119)" />
+      </view>
+    </view>
+    <view class="heder_bottom">
+      <view class="item_ico">
+        <view class="item_ico_ico">0</view>
+        <view class="item_ico_ico">Get</view>
+      </view>
+      <view class="item_ico">
+        <view class="item_ico_ico">0</view>
+        <view class="item_ico_ico">赞</view>
+      </view>
+      <view class="item_ico">
+        <view class="item_ico_ico">0</view>
+        <view class="item_ico_ico">优质回答</view>
+      </view>
+    </view>
+  </view>
+  <view class="boders"></view>
+  <view class="list">
+  <view class="mylist">
+  <text>我的Get</text>
+  <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+  <view class="mylist">
+  <text>我的发布</text>
+  <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+  <view class="mylist">
+  <text>我的关注</text>
+  <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+  </view>
+</view>

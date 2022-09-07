@@ -1,0 +1,142 @@
+<!--pages/news/news.wxml-->
+<!-- 头部 -->
+<view class="companytop" wx:for="{{companytop}}" wx:key="idtop" bindtap="tabtop" data-id="{{index}}">
+  <text class="companytopone {{index==tabtopone?'tab-top':''}}">{{item.text}}</text>
+</view>
+<!-- 发现公司 -->
+<view hidden="{{tabtopone !== 0}}">
+  <view class="companyBtn" wx:for="{{companybtn}}" wx:key="idjob" bindtap="tabmiddle" data-id="{{item.id}}">
+    <button class="companymiddleBtn {{item.id==tabbtn?'tab-btn':''}}">{{item.text}}</button>
+  </view>
+  <!-- 职位多 -->
+  <view hidden="{{tabbtn !== 0}}">
+    <!-- 头部 -->
+    <view wx:for="{{jobs}}" wx:key="*this" wx:for-item="job">
+      <view class="job">
+        <view class="jobimg">
+          <image src="{{job.img}}"></image>
+        </view>
+        <!-- 文字 -->
+        <view class="jobtext">
+          <text class="jobtextone">{{job.jobtextone}}</text>
+          <view class="texttwo">
+            <text class="jobtexttwo">{{job.jobtexttwo}}</text>
+          </view>
+          <view class="textback">
+            <van-icon name="arrow" class="jobjump" />
+          </view>
+        </view>
+      </view>
+      <!-- 岗位 -->
+      <view class="jobContent" wx:for="{{job.array2}}" wx:key="*this" wx:for-item="item">
+        <view class="jobContentone">
+          <view class="jobContentonea">
+            <text class="jobContentjob">{{item.jobContentjob}}</text>
+          </view>
+          <view class="jobContentoneb">
+            <text class="jobContentmoney">{{item.jobContentmoney}}</text>
+          </view>
+        </view>
+        <view class="jobContenttwo">
+          <text class="jobContentaddress">{{item.jobContentaddress}}</text>
+          <text class="jobContentidentity">{{item.jobContentidentity}}</text>
+          <text class="jobContenteducational">{{item.jobContenteducational}}</text>
+        </view>
+      </view>
+      <view class="kong"></view>
+    </view>
+  </view>
+  <!-- 体验好 -->
+  <view hidden="{{tabbtn !== 1}}">
+    <text class="experiencetop">这些公司，更好的工作体验</text>
+    <view class="job">
+      <view class="jobimg">
+        <image src="../../images/have/公司.png"></image>
+      </view>
+      <!-- 文字 -->
+      <view class="jobtext">
+        <text class="jobtextone">狮桥</text>
+        <view class="texttwo">
+          <text class="jobtexttwo">不融资 | 100-999人 | 互联网金融</text>
+        </view>
+        <view class="textback">
+          <van-icon name="arrow" class="jobjump" />
+        </view>
+      </view>
+    </view>
+    <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}"
+      bindtouchstart="touchStart" bindtouchend="touchEnd">
+      <view class="card-box" id="card_{{index}}" wx:for="{{list}}" wx:key="cardid">
+        <view class="card">
+          <view>
+            <view class="guanzhutwoin">
+              <image src="{{item.imghead}}" class="touxiang"></image>
+              <view class="guanzhutwoon">
+                <text class="guanzhutwotext1">{{item.name}}</text>
+                <text class="guanzhutwotext2">{{item.postion}}</text>
+              </view>
+            </view>
+            <view class="imghe">
+              <image src="{{item.imgall}}" class="heying"></image>
+            </view>
+          </view>
+          <view class="cardtimu">
+            <text>{{item.cardtimuone}}</text>
+          </view>
+          <view class="cardtext">
+            <text>{{item.cardtext}}</text>
+          </view>
+          <view class="cardtimu">
+            <text>{{item.cardtimutwo}}</text>
+          </view>
+          <view class="cardbottom">
+            <view class="cardbottomone">
+              <text>{{item.cardbottomone}}</text>
+            </view>
+            <view class="cardbottomtwo">
+              <van-icon name="good-job-o" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 看照片 -->
+  <view hidden="{{tabbtn !== 2}}">
+    <text class="experiencetop">这些公司，有精彩公司照片</text>
+  </view>
+  <!-- 有大佬 -->
+  <view hidden="{{tabbtn !== 3}}">
+    <text class="experiencetop">这些公司，高管有大佬</text>
+  </view>
+</view>
+
+
+<!-- 全部公司 -->
+<view hidden="{{tabtopone !== 1}}">
+  <view class="alljobtop">
+    <view class="alljobtopone">全国</view>
+    <view class="alljobtopone">行业</view>
+    <view class="alljobtopone">规模</view>
+    <view class="alljobtopone">融资阶段</view>
+  </view>
+  <view class="alljob" wx:for="{{alljob}}" wx:key="id">
+        <view class="jobimgone">
+          <image src="{{item.img}}"></image>
+        </view>
+        <!-- 文字 -->
+        <view class="jobtext">
+          <text class="jobtextone">{{item.name}}</text>
+          <view class="texttwo">
+            <text class="jobtexttwo">{{item.postion}}</text>
+          </view>
+          <view class="textthree">
+            <text class="textthreea">{{item.postiontext}}</text>
+            <text class="textthreeb">等1个职位</text>
+          </view>
+          <view class="textbackone">
+            <van-icon name="arrow" class="jobjump" />
+          </view>
+        </view>
+      </view>
+</view>

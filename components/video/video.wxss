@@ -1,0 +1,36 @@
+/* pages/index/index.wxss */
+.myVideo{
+    width: 100vw;
+}
+
+.danmu{
+    margin:0rpx 6rpx ;
+    display: flex;
+    justify-content: space-around;
+}
+.danmu input{
+    border: 2rpx solid #4169e1;
+    height: 80rpx;
+    /* 如果界面有剩余空间 会自动填充 */
+    flex-grow: 1;
+}
+.danmu button{
+    background-color: #4169e1;
+    color: aliceblue;
+    margin: 0rpx;
+    height: 84rpx;
+    border-radius: 0 10rpx 10rpx 0;
+}
+
+.videoBar{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 10vw;
+    color: #4169e1;
+    border-bottom: 1rpx solid #4169e1;
+}
+.videoBar image{
+    width: 10vw;
+    height: 10vw;
+}

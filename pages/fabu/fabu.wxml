@@ -1,0 +1,176 @@
+<!--pages/index/index.wxml-->
+
+<!-- 导航栏 -->
+<view>
+  <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+    <view class="nav-item" wx:for="{{tabs}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+      <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- 发布招聘岗位 -->
+  <view class="guanzhu" hidden="{{tabCur !== 0}}">
+
+    <van-cell-group>
+      <van-field value="{{ name }}" label="hr姓名" placeholder="请输入姓名" required border="{{ false }}" bind:change="onChange1" />
+
+      <van-field value="{{ title }}" required clearable label="岗位" placeholder="请输入岗位" bind:click-icon="onClickIcon" bind:change="onChange2" />
+
+      <van-field value="{{ price }}" label="薪资范围" placeholder="请输入薪资范围" required border="{{ false }}" bind:change="onChange3" />
+
+      <van-field value="{{ company }}" label="公司名称" placeholder="请输入公司名称" required border="{{ false }}" bind:change="onChange4" />
+
+      <van-field value="{{ NumberP }}" label="公司人数" placeholder="请输入公司人数" required border="{{ false }}" bind:change="onChange5" />
+
+      <van-field value="{{ financing }}" label="是否需要融资" placeholder="请输入是否需要融资" required border="{{ false }}" bind:change="onChange6" />
+
+      <van-field value="{{ Years }}" label="需要经验年限" placeholder="请输入需要经验年限" required border="{{ false }}" bind:change="onChange7" />
+
+      <van-field value="{{ education }}" label="学历" placeholder="请输入学历" required border="{{ false }}" bind:change="onChange8" />
+
+      <van-field value="{{ technology1 }}" label="技能1" required placeholder="请输入技能" border="{{ false }}" bind:change="onChange9" />
+
+      <van-field value="{{ technology2 }}" label="技能2" required placeholder="请输入技能" border="{{ false }}" bind:change="onChange10" />
+
+      <van-field value="{{ technology3 }}" label="技能3" required placeholder="请输入技能" border="{{ false }}" bind:change="onChange11" />
+
+
+
+      <van-field value="{{ region }}" label="工作城市" placeholder="请输入城市" required border="{{ false }}" bind:change="onChange12" />
+
+      <van-field value="{{ content }}" label="岗位职责" placeholder="请输入岗位职责" required border="{{ false }}" autosize type="textarea" bind:change="onChange13" />
+    </van-cell-group>
+    <view class="btn_btn">
+      <button bindtap="enterChat1">发布岗位</button>
+    </view>
+  </view>
+
+
+  <!-- 已发布岗位 -->
+  <view class="tuijian" hidden="{{tabCur !== 1}}">
+    <view class="content">
+      <view class="list" wx:for="{{newsList}}" wx:key="uuid" data-id="{{item.uuid}}" user-select="{{true}}" bindtap="gotoComent">
+        <view class="list_item_1">
+          <text class="list_item_text1">{{item.title}}</text>
+          <text class="list_item_text2">{{item.price}}</text>
+        </view>
+        <view class="list_item_2">
+          <text class="list_item_text3">{{item.company}}</text>
+          <text class="list_item_text4">{{item.NumberP}}</text>
+          <text class="list_item_text5">{{item.financing}}</text>
+        </view>
+        <view class="list_item_3">
+          <text>{{item.Years}}</text>
+          <text>{{item.education}}</text>
+          <text>{{item.technology1}}</text>
+          <text>{{item.technology2}}</text>
+          <text>{{item.technology3}}</text>
+        </view>
+        <view class="list_item_4">
+          <view>
+            <image src="{{item.avatar}}"></image>
+            <text class="list_item_text6">{{item.name}}</text>
+          </view>
+          <text class="list_item_text7">{{item.region}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 收到简历列表 -->
+  <view class="haowen" hidden="{{tabCur !== 2}}">
+    <view class="content1">
+      <van-swipe-cell class="list1" wx:for="{{datalist}}" wx:key="datalist.formData.uuid" right-width="{{ 65 }}" user-select="{{true}}">
+        <van-cell-group bindtap="gotoworker" data-id="{{item.formData.uuid}}">
+          <view class="list_item_11">
+            <view class="list_item_44">
+              <view>
+                <image src="{{item.formData.avatar}}"></image>
+                <text class="list_item_text6">{{item.formData.name}}</text>
+              </view>
+            </view>
+            <text class="list_item_text11">{{item.formData.worktext}}</text>
+            <text class="list_item_text22">{{item.formData.workcity}}</text>
+          </view>
+        </van-cell-group>
+        <view slot="right" style="color: red;" bindtap="deleteWork" data-id="{{item.formData.uuid}}" data-currentid="{{item.taskId1}}">删除</view>
+      </van-swipe-cell>
+
+      <!-- <view class="list1" wx:for="{{datalist}}" wx:key="datalist.formData.uuid" data-id="{{item.formData.uuid}}" user-select="{{true}}" bindtap="gotoworker">
+        <view class="list_item_11">
+          <view class="list_item_44">
+            <view>
+              <image src="{{item.formData.avatar}}"></image>
+              <text class="list_item_text6">{{item.formData.name}}</text>
+            </view>
+          </view>
+          <text class="list_item_text11">{{item.formData.worktext}}</text>
+          <text class="list_item_text22">{{item.formData.workcity}}</text>
+        </view>
+      </view> -->
+    </view>
+  </view>
+
+
+
+  <!-- 我的 -->
+  <view class="dengni" hidden="{{tabCur !== 3}}">
+    <view class="container bg-lightgrey">
+      <!-- 上方 -->
+      <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('http://www.005.tv/uploads/allimg/200331/66-20033116440A58.jpg');height: 414rpx;">
+        <view class="text-center padding-bottom-sm">
+          <view class="cu-avatar xl round bg-gray">
+            <!-- <open-data class="userAvatarUrl" type="userAvatarUrl"></open-data> -->
+            <image style="height: 132rpx;" src="{{users.avatar}}"></image>
+          </view>
+          <view class="margin-top-sm text">
+            <!-- <open-data type="{{users.name}}"></open-data> -->
+            <text >{{users.name}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 下方 -->
+      <view class="cu-list menu shadow-lg padding-tb-xs">
+        <view class="cu-item arrow" id="back1">
+          <navigator class="content" url="/pages/Mine_like/Mine_like" hover-class="none" role="navigation">
+            <text class="cuIcon-like text-orange"></text>
+            <text class="text-grey">我的收藏</text>
+          </navigator>
+        </view>
+        
+        <view class="cu-item arrow" id="back3">
+          <navigator class="content" url="/pages/Mine_setting/Mine_setting" hover-class="none" role="navigation">
+            <text class="cuIcon-settings text-purple"></text>
+            <text class="text-grey">设置</text>
+          </navigator>
+        </view>
+        <view class="cu-item arrow" id="back4">
+          <navigator class="content" url="/pages/Mine_feedback/Mine_feedback" hover-class="none" role="navigation">
+            <text class="cuIcon-write text-cyan"></text>
+            <text class="text-grey">意见反馈</text>
+          </navigator>
+        </view>
+        <view class="cu-item arrow" id="back5">
+          <navigator class="content" url="/pages/AboutWe/AboutWe" hover-class="none" role="navigation">
+            <text class="cuIcon-people text-cyan"></text>
+            <text class="text-grey">关于我们</text>
+          </navigator>
+        </view>
+        <view class="cu-item " id="back6">
+          <!-- <navigator class="content" url="/pages/AboutWe/AboutWe" hover-class="none" role="navigation"> -->
+          <view class="content">
+            <text class="cuIcon-service text-cyan"></text>
+            <text class="text-grey">联系客服</text>
+            <text class="text-number">123-456-789</text>
+          </view>
+        </view>
+        <view class="cu-item arrow" id="back2"  bindtap='backlogin' >
+          <navigator class="content" hover-class="none" role="navigation">
+            <text class="cuIcon-location text-green"></text>
+            <text class="text-grey">退出登录</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

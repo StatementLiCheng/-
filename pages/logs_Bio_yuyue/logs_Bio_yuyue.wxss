@@ -1,0 +1,56 @@
+/* pages/logs_Bio_yuyue/logs_Bio_yuyue.wxss */
+.pages{
+  width: 92%;
+  margin: 0 auto;
+}
+.tips{
+  padding: 20rpx 40rpx ;
+  height: 150rpx;
+  text-align: center;
+  background-color: rgb(210, 253, 253);
+  border-radius: 10rpx;
+}
+.tips text:nth-child(1){
+  display: block;
+  font-size: 34rpx;
+  color: rgb(78, 78, 78);
+}
+.tips text:nth-child(2){
+  margin-top: 18rpx;
+  display: block;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: rgb(133, 133, 133);
+}
+.select_list{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 170rpx;
+}
+.title{
+  width: 70%;
+  float: left;
+}
+.title text{
+  display: block;
+  color: rgb(158, 157, 157);
+}
+.select{
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+.icon van-icon{
+  margin-top: 10rpx;
+  float: right;
+}
+
+.start{
+  margin-top: 240rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: rgb(255, 255, 255);
+  font-size: 34rpx;
+  background-color: rgb(26, 201, 163);
+}

@@ -1,0 +1,64 @@
+<!--pages/have_students/havue_students.wxml-->
+<view class="studentcircle">
+  <text class="studentcircle_text">学生圈</text>
+  <button class="studentcircle_join" wx:if="{{loginin}}" bindtap="logined">+加入</button>
+  <button class="studentcircle_join" wx:else bindtap="login">已加入</button>
+  <text class="studentcircle_textone">
+    和同学们一起互帮互助！共同进步！快乐分享！求职铺路！
+  </text>
+</view>
+<view class="studentcircle_middle">
+  <!-- 滑动框 -->
+  <scroll-view class="image-group" scroll-x="true">
+    <view class="item_list" wx:for="{{img}}" wx:key="id">
+      <image src="{{item.img}}"></image>
+    </view>
+  </scroll-view>
+  <!-- 导航 -->
+  <view class="studentcircle_middletop" wx:for="{{middletop}}" wx:key="id" data-id="{{index}}" bindtap="middleBt">
+    <text class="studentcircle_middletoptext {{item.id==tabbtn?'tab-top':''}}">{{item.text}}</text>
+  </view>
+</view>
+<view class="studentcircletext" hidden="{{tabbtn == 0 || tabbtn == 1 || tabbtn == 2 || tabbtn == 3}}">
+  <text>亲爱的同学：</text>
+  <text>只要你抓住并珍惜生活赐予你的每一个机遇，并且为之努力奋斗，那么无论成就大小，你都应当无憾。</text>
+</view>
+
+<view hidden="{{tabbtn != 0}}" class="studentcircle_school">
+  <view class="studentcircle_bottom">
+    <image src="../../images/have/1.jpg"></image>
+    <text>直直学长</text>
+    <van-icon name="ellipsis" class="three" />
+  </view>
+  <view>
+    <view class="studentcircle_bottomtop">
+      <image src="../../images/have/问.png"></image>
+      <text>求职有问题? 直直学长「喊人」来帮你！</text>
+    </view>
+    <view class="studentcircle_bottomtopdown">
+      <image src="../../images/have/星星.png"></image>
+      <text>好消息！ 好消息！ 学生求职！ 提问有奖！</text>
+      <image src="../../images/have/星星.png"></image>
+    </view>
+  </view>
+  <text class="text">即日起，在本话题内提出你的“求职问题”,收获高质量回答的同时，还有求职大礼包相送!</text>
+  <view class="studentcircle_downone">
+    <image src="../../images/公司.png"></image>
+    <image src="../../images/公司.png"></image>
+    <image src="../../images/公司.png"></image>
+  </view>
+  <view class="studentcircle_downtwo">
+    <image src="../../images/公司.png"></image>
+    <image src="../../images/公司.png"></image>
+    <image src="../../images/公司.png"></image>
+  </view>
+</view>
+<view hidden="{{tabbtn != 1}}">
+  <text>兼职 未完待续...</text>
+</view>
+<view hidden="{{tabbtn != 2}}">
+  <text>实习 未完待续...</text>
+</view>
+<view hidden="{{tabbtn != 3}}">
+  <text>攻略 未完待续...</text>
+</view>

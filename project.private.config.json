@@ -1,0 +1,60 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/video/video",
+                    "pathName": "pages/video/video",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/have/have",
+                    "pathName": "pages/have/have",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "登录",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/fabu/fabu",
+                    "pathName": "pages/fabu/fabu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/logs_Bio/logs_bio",
+                    "pathName": "pages/logs_Bio/logs_bio",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "投递过的简历",
+                    "pathName": "pages/logs_Bio_look/logs_Bio_look",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

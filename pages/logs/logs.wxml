@@ -1,0 +1,160 @@
+<!--logs.wxml-->
+<!-- 登录页面 -->
+<!-- 头部区域 -->
+<view class="header">
+  <view class="userinfo">
+    <view class="log_title" wx:if="{{show}}">
+      <view>
+        <text class="title">{{users.name}}</text>
+      </view>
+      <view>
+        <van-icon name="font-o" color="#ffffff" />
+        <text class="go_title" bindtap="to_logs_Bio"> 查看我的在线简历 </text>
+      </view>
+    </view> 
+    <view class="log_title" wx:else>
+      <view>
+        <text class="title">未登录/注册</text>
+      </view>
+      <view>
+        <text class="go_title" bindtap="to_login"> 点击此处可登录/注册 </text>
+      </view>
+    </view>
+  
+    <view class="userinfo-avatar" bindtap="to_logs_Bio">
+      <image src="{{users.avatar}}"></image>
+    </view>
+  </view>
+</view>
+<!-- 主体区域 -->
+<!-- icon图片链接区域 -->
+<view class="icons">
+  <view class="icon_item" bindtap="to_logs_Bio">
+    <view class="items_image">
+      <image src="../../images/logs_img/daichuli.png"></image>
+    </view>
+    <view class="item_name">在线简历</view>
+  </view>
+  <view class="icon_item" bindtap="to_logs_Bio_look">
+    <view class="items_image">
+      <image src="../../images/logs_img/dingdan.png"></image>
+    </view>
+    <view class="item_name">已投递岗位</view>
+  </view>
+  <view class="icon_item" bindtap="to_logs_mianshi">
+    <view class="items_image">
+      <image src="../../images/logs_img/rizhi_1.png"></image>
+    </view>
+    <view class="item_name" item_name>我的面试</view>
+  </view>
+  <view class="icon_item" bindtap="to_logs_yuyue">
+    <view class="items_image">
+      <image src="../../images/logs_img/yuangongguanli.png"></image>
+    </view>
+    <view class="item_name">职位预定</view>
+  </view>
+</view>
+
+<!-- 更多导航区 -->
+<view class="nav_right" bindtap="to_logs_Bio_benefit">
+  <view class="nav_right_item">
+    <text class="hele_title">求职助手</text>
+  </view>
+  <view class="nav_right_item">
+    <text class="nav_right_title">更多</text>
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<view class="nav_help">
+  <view class="nav_help_item">
+    <view class="help_text1" style=" margin-left: 10rpx">
+      <text>简历刷新</text>
+      <text>提升简历活跃</text>
+    </view>
+    <view class="help_image">
+      <image src="../../images/logs_img/bianji.png"></image>
+    </view>
+  </view>
+  <view class="nav_help_item">
+    <view class="help_text1" style=" margin-left: 10rpx">
+      <text>查工资</text>
+      <text>无限次免费试用</text>
+    </view>
+    <view class="help_image">
+      <image src="../../images/logs_img/yuangongguanli.png"></image>
+    </view>
+  </view>
+</view>
+<!-- 选项列表 -->
+<view class="brs"></view>
+<!-- 我的收藏 -->
+<view class="nav_list" bindtap="to_logs_Bio_want">
+  <view class="nav_list_item">
+    <van-icon name="star-o" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">我的收藏</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<!-- 我的发现 -->
+<view class="nav_list" bindtap="to_logs_Bio_find">
+  <view class="nav_list_item">
+    <van-icon name="eye-o" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">我的发现</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<!-- 隐私设置 -->
+<view class="nav_list" bindtap="to_logs_Bio_hidden">
+  <view class="nav_list_item">
+    <van-icon name="closed-eye" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">隐私设置</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<van-divider />
+<!-- 我要招聘 -->
+<view class="nav_list" bindtap="to_logs_Bio_boss">
+  <view class="nav_list_item">
+    <van-icon name="contact" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">我要招聘</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<!-- 直直公益 -->
+<view class="nav_list" bindtap="to_logs_gongyi">
+  <view class="nav_list_item">
+    <van-icon name="flower-o" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">直直公益</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+<!-- 意见反馈 -->
+<view class="nav_list" bindtap="">
+  <view class="nav_list_item">
+    <van-icon name="info-o" color="rgb(119, 119, 119)" />
+    <text class="nav_list_title">意见反馈</text>
+  </view>
+  <view class="nav_list_item">
+    <van-icon name="arrow" color="rgb(119, 119, 119)" />
+  </view>
+</view>
+
+<!-- 退出登录 -->
+<view class="btnBox"  bindtap="backbtns">
+  <button hover-class="backbtn">退出登录</button>
+</view>
+<!-- 版权信息 -->
+<view class="footer">
+  <text class="footer_content">2022中软前端毕设</text>
+</view>
+

@@ -1,0 +1,45 @@
+<!--pages/logs_Bio_hidden/logs_Bio_hidden.wxml-->
+<!-- 我的隐藏页面 -->
+<view class="pages">
+  <view class="list">
+    <view class="name">
+      <text>屏蔽公司</text>
+    </view>
+    <view class="icos">
+      <van-icon name="arrow" color="rgb(119, 119, 119)" />
+    </view>
+
+  </view>
+  <van-divider />
+
+  <view class="list">
+    <view class="name">
+      <text>对BOSS隐藏简历</text>
+    </view>
+    <view class="icos">
+      <van-switch checked="{{ checked1 }}" active-color="#37C2BC" size="50rpx" bind:change="onChange1"/>
+    </view>
+
+  </view>
+  <van-divider />
+  <view class="list">
+    <view class="name">
+      <text>对猎头/中介等经纪人隐藏简历</text>
+    </view>
+    <view class="icos">
+      <van-switch checked="{{ checked2 }}" active-color="#37C2BC" size="50rpx" bind:change="onChange2"/>
+    </view>
+
+  </view>
+  <van-divider />
+  <view class="list">
+    <view class="name">
+      <text>不看猎头/中介等经纪人职位</text>
+    </view>
+    <view class="icos">
+      <van-switch checked="{{ checked3 }}" active-color="#37C2BC" size="50rpx" bind:change="onChange3"/>
+    </view>
+
+  </view>
+  <van-divider />
+</view>

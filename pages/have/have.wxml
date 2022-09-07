@@ -1,0 +1,94 @@
+<!--pages/index/index.wxml-->
+
+<!-- 导航栏 -->
+<view>
+  <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+    <view class="nav-item" wx:for="{{tabs}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+      <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- 关注 -->
+  <view class="guanzhu" hidden="{{tabCur !== 0}}">
+    <!-- <my-video></my-video> -->
+
+    <!-- 区域一：视频播放区 -->
+    <video id="myVideo" src="{{videoSrc}}" danmu-btn="{{true}}" enable-danmu="{{true}}" danmu-list="{{danmuList}}" bindtimeupdate="getCurrentTime"></video>
+
+    <!-- 区域二：弹幕内容 -->
+    <view class="danmu">
+      <input type="text" name="danmu" id="danmu" placeholder="请输入弹幕内容" bindinput="getDanmu" value="{{inputColor}}"/>
+      <picker mode="selector" range="{{colorList}}" index="{{colorIndex}}" bindchange="getDanmuColor">选择颜色：{{colorList[colorIndex]}}</picker>
+      <button bindtap="sendDanmu">发送弹幕</button>
+    </view>
+
+    <!-- 视频列表 -->
+    <view class="videoList">
+      <view class="videoBar" wx:for="{{vList}}" wx:key="id" bindtap="changeVideo" data-id="{{item.id}}" data-url="{{item.url}}">
+        <image src="/images/微信图片_20210624102934.png"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view class="tuijian" hidden="{{tabCur !== 1}}">
+    <view class="tuijiantop">
+      <view class="tuijianone" wx:for="{{tuijiantop}}" bindtap="logBtn" wx:key="id" data-id="{{item.id}}">
+        <image src="{{item.img}}" class="tuijianonein"></image>
+        <text class="tuijianonetext">{{item.name}}</text>
+      </view>
+    </view>
+    <view class="tuijianmiddle" wx:for="{{tuijianmiddle}}" wx:key="id">
+      <view class="guanzhutwoin">
+        <image src="{{item.img}}" class="touxiang"></image>
+        <view class="guanzhutwoon">
+          <text class="guanzhutwotext1">{{item.name}}</text>
+          <text class="guanzhutwotext2">{{item.position}}</text>
+        </view>
+      </view>
+      <view class="tuijiantwotext">
+        <text>{{item.text}}</text>
+      </view>
+      <view>
+        <van-icon name="good-job-o" size="40rpx" class="zan" color="gray" />
+        <van-icon name="comment-o" size="36rpx" class="pinglun" color="gray" />
+      </view>
+    </view>
+
+  </view>
+  <view class="haowen" hidden="{{tabCur !== 2}}">
+    <view class="haowen_text" wx:for="{{haowen}}" wx:key="id">
+      <text class="haowen_title">{{item.title}}</text>
+      <text class="haowen_zuozhe">{{item.zuozhe}}</text>
+      <view class="haowen_all">
+        <view class="haowen_neirongbox">
+          <text class="haowen_neirong">{{item.text}}</text>
+        </view>
+        <image src="{{item.src}}" class="haowen_img"></image>
+      </view>
+      <view class="haowen_bottom">
+        <text>{{item.read}} 阅读 ·</text>
+        <text>{{item.pinglun}} 评论 ·</text>
+        <text>{{item.shoucang}} 收藏</text>
+      </view>
+    </view>
+  </view>
+  <view class="dengni" hidden="{{tabCur !== 3}}">
+    <view class="wait" wx:for="{{wait}}" wx:key="id" data-id="{{item.id}}">
+      <view class="waittop">
+        <text class="wait_title">{{item.title}}</text>
+      </view>
+      <view class="wait_content">
+        <image src="{{item.img}}"></image>
+        <text class="wait_name">{{item.name}}</text>
+        <text class="wait_zhiwei">{{item.zhiwei}}</text>
+      </view>
+      <view class="wait_number">
+        <view bindtap="haveHd" data-title="{{item.title}}" data-id="{{item.id}}" class="havein">
+          <text class="wait_number">{{item.number}}</text>
+          <van-icon name="arrow" class="wait_back" />
+        </view>
+        <button class="wait_btn" bindtap="waitBtn" data-id="{{item.id}}">{{item.btn}}</button>
+      </view>
+    </view>
+  </view>
+</view>

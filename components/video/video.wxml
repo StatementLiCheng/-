@@ -1,0 +1,17 @@
+<!-- 区域一：视频播放区 -->
+<video id="myVideo" class="myVideo" src="{{videoSrc}}" danmu-btn="{{true}}" enable-danmu="{{true}}" danmu-list="{{danmuList}}" bindtimeupdate="getCurrentTime"></video>
+
+<!-- 区域二：弹幕内容 -->
+<view class="danmu">
+    <input type="text" name="danmu" id="danmu" placeholder="请输入弹幕内容" bindinput="getDanmu"/>
+    <picker mode="selector" range="{{colorList}}" index="{{colorIndex}}" bindchange="getDanmuColor">选择颜色：{{colorList[colorIndex]}}</picker>
+    <button bindtap="sendDanmu" >发送弹幕</button>
+</view>
+
+<!-- 视频列表 -->
+<view class="videoList">
+    <view class="videoBar" wx:for="{{vList}}" wx:key="id" bindtap="changeVideo"  data-id="{{item.id}}" data-url="{{item.url}}">
+        <image src="/images/微信图片_20210624102934.png"></image>
+        <text>{{item.title}}</text>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/logs_gongyi/logs_gongyi.wxml-->
+<!-- 直直公益 -->
+
+<view class="pages">
+  <view class="helpme">
+    <text>
+      救救孩子吧！
+    </text>
+    <text>
+      吃不起饭了！
+    </text>
+  </view>
+  <view class="img">
+  <image src="../../images/zhifu.png"></image>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+/* pages/have_wait/have_wait.wxss */
+.wait_input{
+  width: 100%;
+  height: 600rpx;
+  margin-top: 20rpx;
+}
+.wait_button{
+  margin-top: 20rpx;
+}

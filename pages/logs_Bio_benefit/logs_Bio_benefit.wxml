@@ -1,0 +1,93 @@
+<!--pages/logs_Bio_benefit/logs_Bio_benefit.wxml-->
+<!-- 求职助手 -->
+<view class="pages">
+  <view class="item1">
+    <text>求职福利大放送</text>
+    <text>昨日已有53676人使用求职工具助力职场之路</text>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/dianpu.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>简历刷新  提高曝光</text>
+      <text>简历被HR查看几率提升1.5倍</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns">免费领取</view>
+    </view>
+  </view>
+
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/kafei.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>热门视频</text>
+      <text>那些你不可能错过的职场技巧</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/huiyi.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>职场职语</text>
+      <text>职场问题互助问答</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/gaishuai.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>薪酬查询</text>
+      <text>一键洞悉职场竞争力</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/lipin.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>职业评测</text>
+      <text>了解性格特征，帮助职业定位</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/qianbao.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>直播招聘</text>
+      <text>用互动的方式找工作</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+  <view class="item2">
+    <view class="item2_img">
+      <image src="../../images/logs_img/benefit/shipin.png"></image>
+    </view>
+    <view class="item2_content">
+      <text>求职攻略</text>
+      <text>你还不知道这些求职技巧吗</text>
+    </view>
+    <view class="item2_btn">
+      <view class="btns2">免费领取</view>
+    </view>
+  </view>
+</view>

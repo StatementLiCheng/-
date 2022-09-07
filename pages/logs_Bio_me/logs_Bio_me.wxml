@@ -1,0 +1,75 @@
+<!--pages/logs_Bio_me/logs_Bio_me.wxml-->
+<!-- 个人信息页面 -->
+<view class="pages">
+  <view class="header">
+    <view class="herder_title">
+      <view class="text">头像</view>
+      <view class="text">上传真实头像，BOSS回复率翻倍！</view>
+    </view>
+    <view class="header_img">
+      <!-- <img src="" alt=""> -->
+      <view class="imgs">11</view>
+    </view>
+  </view>
+  <van-divider />
+  <view class="header2">
+    <view class="herder_title1">
+      <view class="text">姓名</view>
+      <view class="name">这是姓名
+        <van-icon name="arrow" color="rgb(119, 119, 119)" />
+      </view>
+    </view>
+  </view>
+  <van-divider />
+  <view class="sex">
+    <text>性别</text>
+    <view class="radios">
+      <van-radio-group value="{{ radio1 }}" bind:change="onChange1" direction="horizontal">
+        <van-radio name="1">男</van-radio>
+        <van-radio name="2">女</van-radio>
+      </van-radio-group>
+    </view>
+  </view>
+  <van-divider />
+  <view class="sex">
+    <text>我的牛人身份</text>
+    <view class="radios">
+      <van-radio-group value="{{ radio2 }}" bind:change="onChange2" direction="horizontal">
+        <van-radio name="1">职场人</van-radio>
+        <van-radio name="2">学生</van-radio>
+      </van-radio-group>
+    </view>
+  </view>
+  <van-divider />
+
+  <view class="header2" bindtap="group_date">
+    <view class="herder_title1">
+      <view class="text">出生年月</view>
+      <view class="name">{{group_dates[0]}}-{{group_dates[1]}}
+        <van-icon name="arrow" color="rgb(119, 119, 119)" />
+      </view>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" position="bottom" custom-style="height: 35%;" bind:close="onClose">
+    <!-- 日期选择器 -->
+    <van-picker show-toolbar title="标题" columns="{{ columns }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+  </van-popup>
+  <van-divider />
+  <view class="header2" bindtap="group_date">
+    <view class="herder_title1">
+      <view class="text">微信号</view>
+      <view class="name">
+      18795196762
+      </view>
+    </view>
+  </view>
+  <van-divider />
+<view class="tips">
+  <van-icon name="warning-o" color="rgb(119, 119, 119)" />
+  <text>只有当你主动与BOOS交换或同意后才会展示给对方</text>
+</view>
+<van-divider />
+<view class="butt">
+ 保存
+</view>
+</view>

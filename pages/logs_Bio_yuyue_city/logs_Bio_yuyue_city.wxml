@@ -1,0 +1,16 @@
+<!--pages/logs_Bio_yuyue_city/logs_Bio_yuyue_city.wxml-->
+<!-- 城市选择界面 -->
+<view class="pages">
+  <view class="here">
+    <text>定位城市</text>
+    <text>天津</text>
+  </view>
+  <van-divider />
+  <view class="city_list">
+    <text>热门城市</text>
+    <view class="citys">
+      <view class="city" wx:for="{{citys}}" wx:key="id" bindtap="onSelect" data-id="{{item.id}}">{{item.text}}</view>
+     
+    </view>
+  </view>
+</view>

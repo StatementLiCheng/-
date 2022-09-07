@@ -1,0 +1,168 @@
+/* pages/have_students/havue_students.wxss */
+page{
+  background-color:#4FC08D ;
+}
+.studentcircle{
+  width: 100%;
+  height: 280rpx;
+  background-color:#4FC08D ;
+}
+.studentcircle_text{
+  font-size: 55rpx;
+  color: white;
+  margin-left: 36rpx;
+  margin-top: 20rpx;
+  
+}
+.studentcircle_join{
+  display: inline-block;
+  width: 160rpx;
+  height: 60rpx;
+  color: #4FC08D;
+  margin-top: 30rpx;
+  margin-left: 340rpx;
+  font-size: 28rpx;
+}
+.studentcircle_textone{
+  display: block;
+  width: 640rpx;
+  height: 140rpx;
+  color: white;
+  margin-left:36rpx;
+  font-size: 28rpx;
+  margin-top: 14rpx;
+}
+.image-group {
+  width: 100%;
+  height: 280rpx;
+  overflow: hidden;
+  padding: 20rpx;
+  background: #fff;
+  white-space: nowrap;
+  border-top-left-radius:30rpx;
+}
+.item_list {
+  width: 200rpx;
+  height: 220rpx;
+  margin-right: 18rpx;
+  display: inline-block;
+  margin-top: 16rpx;
+}
+.item_list image{
+  width: 180rpx;
+  height: 240rpx;
+  margin: 10rpx;
+  border-radius: 30rpx;
+}
+.studentcircle_middle{
+  width: 100%;
+  background-color: white;
+}
+.studentcircle_middletop{
+  width:100%;
+  height: 60rpx;
+  background-color:white;
+  display: inline;
+}
+.studentcircle_middletoptext{
+  margin-left: 100rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.tab-top{
+  color:black;
+  /* 选中放大 */
+  font-size: 32rpx !important;
+  font-weight: bold;
+}
+.studentcircletext{
+  font-size: 36rpx;
+  margin-top: 70rpx;
+  margin-left: 16rpx;
+}
+.studentcircletext text{
+  display: flex;
+  color: white;
+}
+.studentcircle_school{
+ width: 100%;
+ height: 800rpx;
+ background-color: white;
+}
+.studentcircle_bottom{
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+.studentcircle_bottom image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100rpx;
+  margin-left: 30rpx;
+  margin-top: 36rpx;
+}
+.studentcircle_bottom text{
+  margin-top: 46rpx;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.studentcircle_bottomtop{
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  display: flex;
+}
+.studentcircle_bottomtop image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.studentcircle_bottomtop text{
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-left: 10rpx;
+  margin-top: 8rpx;
+}
+.studentcircle_bottomtopdown{
+  margin-top: 10rpx;
+  margin-left: 32rpx;
+  display: flex;
+}
+.studentcircle_bottomtopdown image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.studentcircle_bottomtopdown text{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  margin-top: 8rpx;
+}
+.three{
+  margin-left: 420rpx;
+  margin-top: 8rpx;
+}
+.text{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+}
+.studentcircle_downone{
+  display: flex;
+  margin-left: 70rpx;
+  margin-top: 30rpx;
+}
+.studentcircle_downone image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+}
+.studentcircle_downtwo{
+  display: flex;
+  margin-left: 70rpx;
+  margin-top: 20rpx;
+}
+.studentcircle_downtwo image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+}

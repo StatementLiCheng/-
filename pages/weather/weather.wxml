@@ -1,0 +1,30 @@
+<view class="container">
+    <!-- 区域1：地区选择器 bindChange 为输入框发生改变事件。 mode="region" 表示小程序的省市区选择器，选择这个组建的时候会在页面底端弹出选择器进行选择，选择完毕后会触发change事件，通过bindchange处理change事件-->
+    <picker mode="region" bindchange="changeRegion">
+        <view>{{region}}</view>
+    </picker>
+    <!-- 区域2：文本区域 -->
+    <text class="content">{{now.temp}}°C {{now.text}}</text>
+    <image src="{{imgSrc}}" class="icon"></image>
+    <view class="bar">
+        <view class="item">湿度</view>
+        <view class="item">气压</view>
+        <view class="item">能见度</view>
+    </view>
+    <view class="bar">
+        <view class="item">{{now.humidity}}%</view>
+        <view class="item">{{now.pressure}}hap</view>
+        <view class="item">{{now.vis}}km</view>
+    </view>
+    <view class="bar">
+        <view class="item">风向</view>
+        <view class="item">风速</view>
+        <view class="item">风力</view>
+    </view>
+    <view class="bar">
+        <view class="item">{{now.windDir}}</view>
+        <view class="item">{{now.windSpeed}}km/h</view>
+        <view class="item">{{now.windScale}}级</view>
+    </view>
+</view>
+

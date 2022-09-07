@@ -1,0 +1,3 @@
+<!--pages/have_wait/have_wait.wxml-->
+<input type="text" class="wait_input" placeholder="认真的回答会带来大量的Get"  bind:change="onChange"/>
+<button class="wait_button" bindtap="submit">发布</button>

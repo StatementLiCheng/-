@@ -1,0 +1,23 @@
+<!--login.wxml-->
+<view class="container">
+	<view class="login" wx:if="{{qiehuan}}">
+		<form bindsubmit="login">
+			<view class="title">就业直通车客户端</view>
+			<input class="input-box" type="text" placeholder="请输入账号" name="username" confirm-hold hold-keyboard="{{true}}" adjust-position="{{true}}"/>
+			<input class="input-box" type="password" placeholder="请输入密码" name= "password" />
+			<view wx:if="{{showError}}" class="error">请输入正确的用户名和密码</view>
+			<button class="login-btn" form-type="submit">登录</button>
+		</form>
+		<view class="zhaopin"  bindtap="zhaopin">我要招聘</view>
+	</view>
+	<view class="login1" wx:else>
+		<form bindsubmit="login">
+			<view class="title1">就业直通车企业端</view>
+			<input class="input-box1" type="text" placeholder="请输入账号" name="username" confirm-hold hold-keyboard="{{true}}" adjust-position="{{true}}"/>
+			<input class="input-box1" type="password" placeholder="请输入密码" name= "password" />
+			<view wx:if="{{showError}}" class="error">请输入正确的用户名和密码</view>
+			<button class="login-btn1" form-type="submit">登录</button>
+		</form>
+		<view class="zhaopin1"  bindtap="zhaopin">我要求职</view>
+	</view>
+</view>

@@ -1,0 +1,123 @@
+/* pages/logs_Bio_me/logs_Bio_me.wxss */
+.pages {
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 200rpx;
+  margin-top: 34rpx;
+}
+
+.herder_title {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.herder_title .text:nth-child(1) {
+  margin-top: 40rpx;
+  margin-left: 10rpx;
+  color: #585858;
+}
+
+.herder_title .text:nth-child(2) {
+  color: rgb(189, 189, 189);
+  font-size: 26rpx;
+  margin-left: 10rpx;
+}
+
+.header_img {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  float: right;
+}
+
+.imgs {
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  top: 22rpx;
+  right: 0;
+  background-color: #b5eaee;
+  overflow: hidden;
+}
+
+.van-divider {
+  /* margin-top: 32rpx 0 0 0 !important; */
+  margin: 0 !important;
+}
+
+.name {
+  font-size: 38rpx;
+  margin-left: 10rpx;
+  font-weight: 500;
+  color: #585858;
+}
+
+.name van-icon {
+  float: right;
+}
+
+.herder_title1 {
+  width: 100%;
+  height: 100%;
+}
+
+.herder_title1 .text:nth-child(1) {
+  margin-top: 40rpx;
+  margin-left: 10rpx;
+  color: #585858;
+}
+
+.header2 {
+  width: 100%;
+  height: 150rpx;
+  margin-top: 34rpx;
+}
+
+.sex {
+  position: relative;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+}
+
+.set text {
+  position: absolute;
+  top: 40rpx;
+  width: 10%;
+}
+
+.radios {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 50rpx;
+}
+
+.tipx {
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.tips text {
+  font-size: 28rpx;
+  color: #8f8f8f;
+}
+
+.butt{
+  width: 90%;
+  height: 80rpx;
+  margin: 40rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+  background-color: #2bbec9;
+}

@@ -1,0 +1,69 @@
+<view class="Detail">
+    <!-- title -->
+    <view class="Detail_title">
+        <view class="Detail_title_text1">
+            <text class="Detail_title_text1_1">{{article.title}}</text>
+            <text class="Detail_title_text1_2">{{article.price}}</text>
+        </view>
+        <view class="Detail_title_text2">
+            <text>{{article.Years}}</text>
+            <text>{{article.education}}</text>
+            <text>{{article.technology1}}</text>
+            <text>{{article.technology2}}</text>
+            <text>{{article.technology3}}</text>
+        </view>
+    </view>
+    <!-- hr -->
+    <view class="Detail_hr">
+        <view class="Detail_hr_view">
+            <image src="{{article.avatar}}"></image>
+            <text>{{article.name}}</text>
+        </view>
+    </view>
+    <!-- content -->
+    <view class="Detail_content">
+        <view>
+            <text>职位详情</text>
+            <text>{{article.region}}</text>
+        </view>
+        <text>{{article.content}}</text>
+    </view>
+    <!-- map -->
+    <view class="Detail_map">
+        <view>位置</view>
+        <image src="/images/map/map.png" bindtap="openLocation" data-id="{{article.uuid}}" data-lat="{{article.latitude}}"
+            data-lon="{{article.longitude}}"></image>
+    </view>
+
+
+    <view class="btn" wx:if="{{taskId}}">
+        <view>
+            <van-cell bind:click="onClick" class="btn_share">
+                <van-icon name="share-o" size="48rpx" />
+                <view>分享</view>
+            </van-cell>
+            <van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:close="onClose" />
+        </view>
+        <view>
+            <view wx:if="{{isAdd}}" class="btn_collection" bindtap="cancelFavorites">
+                <van-icon name="star" size="48rpx" />
+                <text>已收藏</text>
+            </view>
+            <view wx:else class="btn_collection" bindtap="addFavorites"> 
+                <van-icon name="star-o" size="48rpx" />
+                <text>收藏</text>
+            </view>
+        </view>
+        <view class="btn_btn">
+            <button bindtap="enterChat">立即沟通</button>
+        </view>
+    </view>
+
+    <view class="btn_btn1" wx:else>
+      <button bindtap="deleteWork">删除该岗位</button>
+    </view>
+
+    <view class="btn_btn2" wx:if="{{gangweiId}}">
+      <button bindtap="deleteYitoudiGangwei">删除该投递岗位</button>
+    </view>
+</view>

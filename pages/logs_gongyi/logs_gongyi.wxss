@@ -1,0 +1,23 @@
+/* pages/logs_gongyi/logs_gongyi.wxss */
+.pages{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+.helpme{
+  width: 100%;
+  text-align: center;
+  height: 150rpx;
+}
+.helpme text{
+  font-size: 50rpx;
+}
+.img{
+  margin-top: 150rpx;
+  width: 100%;
+  height: 820rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}

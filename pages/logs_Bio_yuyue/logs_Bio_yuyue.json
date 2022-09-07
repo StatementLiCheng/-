@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "订阅职位",
+  "navigationBarBackgroundColor":"#ffffff",
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-tree-select": "@vant/weapp/tree-select/index"
+    }
+}

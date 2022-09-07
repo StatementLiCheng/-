@@ -1,0 +1,5 @@
+<!--pages/logs_Bio_mianshi/logs_Bio_mianshi.wxml-->
+<!-- 我的面试 -->
+<view>
+   <text>暂无面试</text>
+</view>

@@ -1,0 +1,273 @@
+/* pages/logs_Bio/logs_bio.wxss */
+.pages {
+  width: 100%;
+}
+
+.header {
+  margin: 0 40rpx 60rpx 40rpx;
+  /* margin-bottom: 60rpx; */
+}
+
+.tips {
+  margin: 40rpx;
+  height: 200rpx;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2rpx 2rpx 20rpx 1rpx #cfcfcf;
+  border-radius: 20rpx;
+}
+
+.tips_header {
+  padding-top: 20rpx;
+  margin: 0 20rpx 0 20rpx;
+  font-weight: 600;
+  color: #353535;
+}
+
+.tips text {
+  margin: 20rpx;
+  display: block;
+  font-size: 26rpx;
+  color: #7e7e7e;
+}
+
+.tips_right {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: rgb(22, 252, 91);
+  float: right;
+}
+
+/* 简历头部 */
+.jianli_title {
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.jianli_title:active {
+  background-color: rgb(235, 235, 235);
+}
+
+.jianli_title_name {
+  padding-left: 40rpx;
+  width: 45%;
+  height: 150rpx;
+  float: left;
+  color: #474747;
+  font-size: 50rpx;
+  font-weight: 600;
+  padding-top: 50rpx;
+}
+
+.jianli_title_name text {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #353535;
+  display: block;
+}
+
+.jianli_title_image {
+  padding-right: 40rpx;
+  width: 40%;
+  height: 100%;
+  float: right;
+}
+
+.imgs {
+  float: right;
+  margin-top: 26rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: aliceblue;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imgs image{
+  width: 100%;
+  height: 100%;
+}
+
+.van-divider {
+  /* margin-top: 32rpx 0 0 0 !important; */
+  margin: 0 !important;
+}
+
+/* 个人优势 */
+.personal {
+  width: 100%;
+  height: 300rpx;
+  margin-top: 40rpx;
+  /* padding: 0 40rpx; */
+}
+
+.personal:active {
+  background-color:  rgb(235, 235, 235);
+}
+
+.personal_title {
+  color: #474747;
+  font-size: 38rpx;
+  padding: 30rpx 40rpx;
+}
+
+.personal_title van-icon {
+  /* margin-left: 430rpx; */
+  float: right;
+}
+
+.personal_content {
+  padding: 20rpx 30rpx;
+}
+
+.personal_content text {
+  display: block;
+  width: 100%;
+  /* height: 50rpx; */
+  color: #8a8a8a;
+  font-size: 34rpx;
+  line-height: 40rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.picker{
+  width: 100%;
+  height: 200rpx;
+  line-height: 100rpx;
+}
+.pricker_title{
+  margin-left: 40rpx;
+  /* float: left; */
+  color: #474747;
+  font-size: 38rpx;
+}
+.pricker_cont{
+  margin-right: 40rpx;
+  color:#aaaaaa;
+  float: right;
+}
+.picker:active{
+  background-color: rgb(235, 235, 235);
+}
+
+/* 求职期望 */
+.want{
+  width: 100%;
+  height: 280rpx;
+}
+.want_title{
+  height: 100rpx;
+  color: #474747;
+  font-size: 38rpx;
+  line-height: 100rpx;
+  margin-left: 40rpx;
+  padding-top: 20rpx;
+}
+.want_cont{
+  padding-top: 40rpx;
+  padding-left: 40rpx;
+  height: 120rpx;
+}
+.want_cont:active{
+ background-color: rgb(235, 235, 235);
+}
+
+textarea{
+  height: 150rpx;
+}
+
+.want_cont van-icon{
+  margin-right: 40rpx;
+  float: right;
+}
+
+/* 工作经历 */
+.work{
+  /* width: 100%; */
+  height: 150rpx;
+  padding: 0 40rpx;
+  line-height: 150rpx;
+  color: #474747;
+  font-size: 38rpx;
+}
+.work:active{
+  background-color: rgb(235, 235, 235);
+}
+.work van-icon{
+  margin-top: 60rpx;
+  float: right;
+}
+/* 底部按钮 */
+.my_offic{
+  /* margin-top: 30rpx; */
+  width: 80%;
+  height: 80rpx;
+  margin: 20rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  color: #666666;
+  background-color: #f1f1f1;
+  border-radius: 10rpx;
+}
+
+
+
+
+/* 城市 职位选择器部分 */
+.tips{
+  padding: 20rpx 40rpx ;
+  height: 150rpx;
+  text-align: center;
+  background-color: rgb(210, 253, 253);
+  border-radius: 10rpx;
+}
+.tips text:nth-child(1){
+  display: block;
+  font-size: 34rpx;
+  color: rgb(78, 78, 78);
+}
+.tips text:nth-child(2){
+  margin-top: 18rpx;
+  display: block;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: rgb(133, 133, 133);
+}
+.select_list{
+  width: 100%;
+  height: 200rpx;
+}
+.title{
+  width: 70%;
+  float: left;
+}
+.title text{
+  display: block;
+  color: rgb(158, 157, 157);
+}
+.select{
+  margin-left: 10vw;
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+.icon van-icon{
+  margin-top: 10rpx;
+  float: right;
+}
+
+.start{
+  margin-top: 240rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: rgb(255, 255, 255);
+  font-size: 34rpx;
+  background-color: rgb(26, 201, 163);
+}

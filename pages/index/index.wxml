@@ -1,0 +1,89 @@
+<view class="home">
+    <!-- 搜索 -->
+    <van-search value="{{ searchValue }}" background="#4fc08d" shape="round" placeholder="请输入搜索关键词" use-action-slot  bind:change="onChange" >
+        <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+    <!-- navbar -->
+    <view class="nav">
+        <scroll-view scroll-x enable-flex scroll-with-animation scroll-left="">
+            <navigator url="../nearby/nearby" class="nav_item">
+                <view>
+                    <image src="/images/navbar/ditu.png"></image>
+                </view>
+                <text>附近工作</text>
+            </navigator>
+            <navigator url="../weather/weather" class="nav_item">
+                <view>
+                    <image src="/images/navbar/gonglve.png"></image>
+                </view>
+                <text>今日天气</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/jiaoxue.png"></image>
+                </view>
+                <text>技能培训</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/gonggao.png"></image>
+                </view>
+                <text>政策发布</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/touzi.png"></image>
+                </view>
+                <text>查工资</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/biaoqian.png"></image>
+                </view>
+                <text>高薪优选</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/fangyuan.png"></image>
+                </view>
+                <text>热门公司</text>
+            </navigator>
+            <navigator url="../index/index" class="nav_item">
+                <view>
+                    <image src="/images/navbar/gerenziliao.png"></image>
+                </view>
+                <text>职位分类</text>
+            </navigator>
+        </scroll-view>
+    </view>
+    <!-- 推荐职位 -->
+    <view class="content">
+        <view class="content_top">推荐职位</view>
+        <view class="list" wx:for="{{newsList}}" wx:key="uuid" data-id="{{item.uuid}}" user-select="{{true}}"
+            bindtap="gotoComent">
+            <view class="list_item_1">
+                <text class="list_item_text1">{{item.title}}</text>
+                <text class="list_item_text2">{{item.price}}</text>
+            </view>
+            <view class="list_item_2">
+                <text class="list_item_text3">{{item.company}}</text>
+                <text class="list_item_text4">{{item.NumberP}}</text>
+                <text class="list_item_text5">{{item.financing}}</text>
+            </view>
+            <view class="list_item_3">
+                <text>{{item.Years}}</text>
+                <text>{{item.education}}</text>
+                <text>{{item.technology1}}</text>
+                <text>{{item.technology2}}</text>
+                <text>{{item.technology3}}</text>
+            </view>
+            <view class="list_item_4">
+                <view>
+                    <image src="{{item.avatar}}"></image>
+                    <text class="list_item_text6">{{item.name}}</text>
+                </view>
+                <text class="list_item_text7">{{item.region}}</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,260 @@
+/* pages/fabu/fabu.wxss */
+
+page {
+  background-color: #F5F5F5;
+}
+
+.navbar {
+  width: 100%;
+  height: 90rpx;
+  /* 文本不换行 */
+  white-space: nowrap;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+  align-items: center;
+  /* 固定在顶部 */
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+}
+
+.nav-item {
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  height: 100%;
+  display: inline-block;
+  /* 普通文字大小 */
+  font-size: 28rpx;
+}
+
+.nav-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 4rpx;
+  box-sizing: border-box;
+  font-family: "kaiTi";
+  font-size: 30rpx;
+}
+
+.tab-on {
+  color: black;
+  /* 选中放大 */
+  /* font-size: 38rpx !important; */
+  font-weight: 600;
+  font-weight: bolder;
+  /* border-bottom: 4rpx solid black !important; */
+}
+
+.guanzhu {
+  margin-top: 100rpx;
+}
+
+.tuijian {
+  margin-top: 100rpx;
+}
+
+.haowen {
+  margin-top: 100rpx;
+}
+
+.dengni {
+  margin-top: 100rpx;
+}
+
+.btn_btn {
+  width: 60vw;
+  margin-left: 20vw;
+}
+
+.btn_btn button {
+  background-color: #4FC08D;
+  color: white;
+  margin-right: 50rpx;
+}
+
+/* 已发布岗位 */
+.content {
+  margin: 10rpx 10rpx;
+  background-color: #eee;
+}
+
+.content_top {
+  font-size: 50rpx;
+  font-weight: 700;
+  line-height: 110rpx;
+  width: 100vw;
+  height: 110rpx;
+  background-color: rgb(255, 255, 255);
+}
+
+.list {
+  height: 250rpx;
+  margin-top: 5rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+  padding-top: 15rpx;
+  justify-content: space-around;
+}
+
+.list_item_1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item_text1 {
+  font-size: 42rpx;
+  font-weight: 600;
+}
+
+.list_item_text2 {
+  color: #4fc08d;
+}
+
+.list_item_2 {
+  font-size: 32rpx;
+}
+
+.list_item_2 text {
+  margin-left: 20rpx;
+}
+
+.list_item_3 text {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  background-color: #eee;
+}
+
+.list_item_4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_item_4 view {
+  display: flex;
+  width: 500rpx;
+  height: 40rpx;
+  font-size: 32rpx;
+}
+
+.list_item_4 image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+}
+
+.list_item_text7 {
+  font-size: 35rpx;
+  color: rgb(201, 200, 200);
+}
+
+
+/* 收到简历 */
+.content1 {
+  margin: 10rpx 10rpx;
+  background-color: #eee;
+}
+
+.list1 {
+  height: 90rpx;
+  margin-top: 5rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+  padding-top: 15rpx;
+  justify-content: space-around;
+}
+
+.list_item_11 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list_item_44 {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+.list_item_44 view {
+  display: flex;
+  width: 500rpx;
+  height: 40rpx;
+  font-size: 32rpx;
+}
+.list_item_44 view text{
+margin-left: 20rpx;
+}
+
+.list_item_44 image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+}
+
+.list_item_text7 {
+  font-size: 35rpx;
+  color: rgb(201, 200, 200);
+}
+
+.list_item_text11 {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.list_item_text22 {
+  color: #4fc08d;
+}
+
+
+
+/* 我的 */
+ /* 使用colorui */
+@import "/style/colorui/main.wxss";
+@import "/style/colorui/icon.wxss";
+
+
+
+.userAvatarUrl {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+/*定义购物车右上角红点样式*/
+.cart_badge{
+  position: relative;
+  width: 100rpx;
+  margin: 0 auto;
+}
+.text{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: rgba(240,255,255, 0.8);
+}
+#back1{
+  background:linear-gradient(60deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}
+#back2{
+  background:linear-gradient(50deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}
+#back3{
+  background:linear-gradient(40deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}
+#back4{
+  background:linear-gradient(30deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}
+#back5{
+  background:linear-gradient(20deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}
+#back6{
+  background:linear-gradient(20deg,rgba(240,230,140,0.1),rgba(30,144,255,0.1));
+}

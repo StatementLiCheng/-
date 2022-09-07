@@ -1,0 +1,44 @@
+<!--pages/logs_Bio_boss/logs_Bio_boss.wxml-->
+<!-- BOSS直聘界面 -->
+<view class="pages">
+  <view class="tops">
+    <text>千万招聘者的选择</text>
+    <text>招聘效果看的见</text>
+  </view>
+  <view class="card">
+    <view class="item">
+      <view class="title">
+        <text>海量人才</text>
+        <text>数千万求职者在线活跃，等你来聊</text>
+      </view>
+      <view class="img">
+        <image src="../../images/logs_img/Startup Collaboration.png"></image>
+      </view>
+
+    </view>
+    <view class="item1">
+      <view class="title">
+        <text>海量人才</text>
+        <text>数千万求职者在线活跃，等你来聊</text>
+      </view>
+      <view class="img">
+        <image src="../../images/logs_img/Develope Mobile App.png"></image>
+      </view>
+
+    </view>
+    <view class="item1">
+      <view class="title">
+        <text>海量人才</text>
+        <text>数千万求职者在线活跃，等你来聊</text>
+      </view>
+      <view class="img">
+        <image src="../../images/logs_img/Presentation Collaboration.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="foter">
+    <view class="{{btnshowWork?'btns bgced':'btns bgc'}}" bindtap="toCheckWorker">切换为求职者</view>
+    <view class="{{btnshowBoss?'btns bgced':'btns bgc'}}" bindtap="toCheckBoss">马上招聘</view>
+  </view>
+</view>

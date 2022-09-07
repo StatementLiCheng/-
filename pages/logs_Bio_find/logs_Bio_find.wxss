@@ -1,0 +1,89 @@
+/* pages/logs_Bio_find/logs_Bio_find.wxss */
+.pages{
+  width: 100%;
+  margin: 0 auto;
+}
+.header{
+  width: 90%;
+  margin: 20rpx 40rpx 0 40rpx;
+  height: 330rpx;
+}
+.header_top{
+  position: relative;
+  width: 100%;
+  height: 170rpx;
+}
+.heder_img{
+  position: relative;
+width: 170rpx;
+height: 100%;
+float: left;
+border-radius: 50%;
+background-color: powderblue;
+}
+.heder_name{
+  width: 70%;
+  height: 100%;
+  position: relative;
+float: left;
+}
+.heder_name text:nth-child(1){
+  display: block;
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.heder_name text:nth-child(2){
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: rgb(110, 110, 110);
+}
+.heder_name van-icon{
+  float: right;
+  margin-top: -20rpx;
+}
+
+.heder_bottom{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100rpx;
+}
+
+.item_ico{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 130rpx;
+}
+.item_ico .item_ico_ico:nth-child(1){
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgb(48, 48, 48);
+}
+.item_ico .item_ico_ico:nth-child(2){
+  font-size: 26rpx;
+  color: rgb(124, 124, 124);
+}
+.boders{
+  width: 100%;
+  height: 15rpx;
+  background-color: rgb(248, 248, 248);
+}
+.mylist{
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.mylist text{
+  margin-left: 40rpx;
+  color: rgb(97, 97, 97);
+}
+.mylist van-icon{
+  float: right;
+  margin-right: 40rpx;
+  margin-top: 50rpx;
+}

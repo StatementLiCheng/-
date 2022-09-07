@@ -1,0 +1,51 @@
+<!--pages/logs_Bio_yuyue/logs_Bio_yuyue.wxml-->
+<!-- 订阅职位 -->
+<view class="pages">
+
+</view>
+
+<!-- 订阅职位 -->
+<view class="pages">
+  <view class="tips">
+    <text>您还未开启新职位发布通知</text>
+    <text>开启通知后，我们将于每周二上午10点推送最新、最精准的职位信息至您的微信，让你不再错过好工作！</text>
+  </view>
+  <view class="select_list">
+    <text>意向职位</text>
+    <view class="select" bindtap="checkwork">
+      <view class="title">
+        <text>{{worktext}}</text>
+      </view>
+      <view class="icon">
+        <van-icon name="arrow" color="rgb(158, 157, 157)" />
+      </view>
+    </view>
+  </view>
+  <van-divider />
+  <view class="select_list">
+    <text>工作城市</text>
+    <view class="select" bindtap="checkcity">
+      <view class="title">
+        <text>{{workcity}}</text>
+      </view>
+      <view class="icon">
+        <van-icon name="arrow" color="rgb(158, 157, 157)" />
+      </view>
+    </view>
+  </view>
+  <van-divider />
+  <view class="select_list">
+    <text>其他要求</text>
+    <view class="select" bindtap="checkwant">
+      <view class="title">
+        <text>{{workwant}}</text>
+      </view>
+      <view class="icon">
+        <van-icon name="arrow" color="rgb(158, 157, 157)" />
+      </view>
+    </view>
+  </view>
+  <van-divider />
+
+  <view class="start">开启职位通知</view>
+</view>

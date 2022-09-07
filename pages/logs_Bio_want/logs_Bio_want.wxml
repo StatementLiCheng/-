@@ -1,0 +1,39 @@
+<!--pages/logs_Bio_want/logs_Bio_want.wxml-->
+<!-- 我的收藏 -->
+<view class="pags">
+  <view wx:if="{{have}}">
+    请登录查看收藏职位
+  </view>
+  <view wx:else>
+    <view class="content">
+      <view class="list" wx:for="{{datalist}}" wx:key="uuid" data-id="{{item.article.uuid}}" user-select="{{true}}" bindtap="gotoComent">
+        <view class="list_item_1">
+          <text class="list_item_text1">{{item.article.title}}</text>
+          <text class="list_item_text2">{{item.article.price}}</text>
+        </view>
+        <view class="list_item_2">
+          <text class="list_item_text3">{{item.article.company}}</text>
+          <text class="list_item_text4">{{item.article.NumberP}}</text>
+          <text class="list_item_text5">{{item.article.financing}}</text>
+        </view>
+        <view class="list_item_3">
+          <text>{{item.article.Years}}</text>
+          <text>{{item.article.education}}</text>
+          <text>{{item.article.technology1}}</text>
+          <text>{{item.article.technology2}}</text>
+          <text>{{item.article.technology3}}</text>
+        </view>
+        <view class="list_item_4">
+          <view>
+            <image src="{{item.article.avatar}}"></image>
+            <text class="list_item_text6">{{item.article.name}}</text>
+          </view>
+          <text class="list_item_text7">{{item.article.region}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

@@ -1,0 +1,103 @@
+/* pages/logs_Bio_boss/logs_Bio_boss.wxss */
+.pages{
+  width: 100%;
+}
+.tops{
+  width: 100%;
+  height: 300rpx;
+  padding-top: 70rpx;
+  text-align: center;
+  background-color: rgb(16, 202, 131);
+}
+.tops text:nth-child(1){
+  display: block;
+  font-size: 60rpx;
+  color: #ffffff;
+}
+.tops text:nth-child(2){
+  margin-top: 18rpx;
+  display: block;
+  font-size: 40rpx;
+  color: #ffffff;
+}
+.card{
+  position: absolute;
+  width: 90%;
+  top: 290rpx;
+  left: 5%;
+  height: 700rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 2rpx 2rpx 20rpx 1rpx #d6d5d5;
+}
+.item{
+  width: 100%;
+  height: 170rpx;
+  margin-top: 80rpx;
+
+}
+.item1{
+  width: 100%;
+  height: 170rpx;
+  margin-top: 40rpx;
+
+}
+.title{
+  width: 70%;
+  height: 100%;
+  float: left;
+
+}
+.title text:nth-child(1){
+  margin-top:20rpx;
+  margin-left: 30rpx;
+  display: block;
+  font-size: 38rpx;
+  font-weight: 500;
+  color: #414141;
+}
+.title text:nth-child(2){
+  margin-top:20rpx;
+  margin-left: 30rpx;
+  display: block;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #414141;
+}
+.img{
+  width: 30%;
+  height: 100%;
+  float: left;
+  background-color: #ffffff;
+}
+.img image{
+  margin-top: 5%;
+  width: 100%;
+  height: 90%;
+}
+.foter{
+  margin-top: 650rpx;
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.btns{
+  margin-top: 60rpx;
+  width: 340rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.bgc{
+  font-size: 36rpx;
+  color: #505050;
+  background-color: #eeeeee;
+}
+.bgced{
+  font-size: 36rpx;
+  color: #fdfdfd;
+  background-color: rgb(16, 202, 131);
+}

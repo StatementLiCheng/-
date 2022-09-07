@@ -1,0 +1,11 @@
+<!--pages/logs_Bio_yuyue_work/logs_Bio_yuyue_work.wxml-->
+<!-- 城市选择界面 -->
+<view class="pages">
+  <view class="serch">
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round"  bind:change="onChange"/>
+  </view>
+  <view class="selects">
+    <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}"
+      bind:click-nav="onClickNav" bind:click-item="onClickItem" height="1200rpx" />
+  </view>
+</view>

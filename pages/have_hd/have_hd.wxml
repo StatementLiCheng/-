@@ -1,0 +1,9 @@
+<!--pages/have_hd/have_hd.wxml-->
+<view class="titletop">
+    <text class="title">{{title}}</text>
+</view>
+<view class="content">
+    <view wx:for="{{hd}}" class="list" wx:key="id" >
+        匿名用户：{{item}}
+    </view>
+</view>

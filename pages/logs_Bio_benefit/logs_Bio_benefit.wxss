@@ -1,0 +1,78 @@
+/* pages/logs_Bio_benefit/logs_Bio_benefit.wxss */
+.pages{
+  padding: 30rpx 20rpx;
+  background-color: #4FC08D;
+}
+.item1 {
+  height: 130rpx;
+}
+.item1 text:nth-child(1){
+  display: block;
+  font-size: 50rpx;
+  color: #ffffff;
+}
+.item1 text:nth-child(2){
+  display: block;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+.item2{
+  margin-top: 30rpx;
+  height: 190rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.item2_img{
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.item2_img image{
+  margin-left: 20rpx;
+  margin-top: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.item2_content{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.item2_content text:nth-child(1){
+  margin-top: 46rpx;
+  display: block;
+  font-size: 38rpx;
+  color: #3b3b3b;
+}
+.item2_content text:nth-child(2){
+  display: block;
+  font-size: 26rpx;
+  color: #666565;
+}
+.item2_btn{
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.btns{
+  width: 180rpx;
+  height: 70rpx;
+  margin: 50rpx auto;
+  border: 2rpx solid  #FD5C60;
+  border-radius: 35rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #ffffff;
+  background-color: #FD5C60;
+}
+.btns2{
+  width: 180rpx;
+  height: 70rpx;
+  margin: 50rpx auto;
+  border: 2rpx solid  #12ADA9;
+  border-radius: 35rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #12ADA9;
+}

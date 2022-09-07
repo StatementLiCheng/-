@@ -1,0 +1,134 @@
+<!-- 在线简历页面 -->
+<view class="pages">
+  <view wx:if="{{show}}">
+    请登录查看在线简历
+  </view>
+  <view wx:else>
+    <!-- 个人信息 -->
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+      <view class="jianli_title">
+        <view class="jianli_title_name">
+          {{userlist.name}}
+          <van-icon name="font-o" color="rgb(119, 119, 119)" />
+          <text>22年应届生-23岁-本科</text>
+        </view>
+        <view class="jianli_title_image">
+          <view class="imgs">
+            <image src="{{userlist.avatar}}"></image>
+          </view>
+        </view>
+      </view>
+      <van-divider />
+      <!-- 个人优势 -->
+      <view class="personal">
+        <view class="personal_title">
+          <text>个人优势</text>
+          <van-icon name="font-o" color="rgb(119, 119, 119)" />
+        </view>
+        <textarea name="gerenyoushi" value="{{gerenyoushi}}" maxlength='200' disabled='{{disabled}}' style="width: 80vw;margin-left: 10vw; color: #7e7e7e;" />
+      </view>
+
+
+      <van-divider />
+      <!-- 求职状态 -->
+      <view class="picker">
+        <view class="pricker_title">
+          求职状态
+        </view>
+        <radio-group name="radio" style="width: 90vw;margin-left: 10vw; color: #7e7e7e;"  disabled='{{disabled}}'>
+          <label>
+            <radio checked="{{radioChecked}}" value="1" style="margin-left: 50rpx;" />在校-考虑机会
+          </label>
+          <label>
+            <radio checked="{{!radioChecked}}" value="2" />离校-随时到岗
+          </label>
+        </radio-group>
+      </view>
+
+      <van-divider />
+
+      <view class="select_list">
+        <view class="personal_title">
+          <text>意向职位</text>
+        </view>
+        <view class="select" bindtap="checkwork">
+          <view class="title">
+            <text>{{worktext}}</text>
+          </view>
+          <view class="icon">
+            <van-icon name="arrow" color="rgb(158, 157, 157)" />
+          </view>
+        </view>
+      </view>
+      <van-divider />
+      <view class="select_list">
+        <view class="personal_title">
+          <text>工作城市</text>
+        </view>
+        <view class="select" bindtap="checkcity">
+          <view class="title">
+            <text>{{workcity}}</text>
+          </view>
+          <view class="icon">
+            <van-icon name="arrow" color="rgb(158, 157, 157)" />
+          </view>
+        </view>
+      </view>
+
+      <van-divider />
+      <!-- 工作经历 -->
+      <view class="personal">
+        <view class="personal_title">
+          <text>工作经历</text>
+        </view>
+        <view class="personal_content">
+          <textarea name="gongzuojingli" value="{{gongzuojingli}}" maxlength='200' disabled='{{disabled}}' style="width: 80vw;margin-left: 10vw; color: #7e7e7e;">
+      <!-- 比较喜欢敲代码，对新技术以及语法新特性能够快速接受，并且掌握加以使用，平时爱读书，尤其喜欢JavaScript类的书籍 -->
+      </textarea>
+        </view>
+      </view>
+      <van-divider />
+      <!-- 项目经历 -->
+      <view class="personal">
+        <view class="personal_title">
+          <text>项目经历</text>
+        </view>
+        <view class="personal_content">
+          <textarea name="xiangmujingli" value="{{xiangmujingli}}" maxlength='200' disabled='{{disabled}}' style="width: 80vw;margin-left: 10vw; color: #7e7e7e;">
+      <!-- 比较喜欢敲代码，对新技术以及语法新特性能够快速接受，并且掌握加以使用，平时爱读书，尤其喜欢JavaScript类的书籍 -->
+      </textarea>
+        </view>
+      </view>
+      <van-divider />
+      <!-- 教育经历 -->
+      <view class="personal">
+        <view class="personal_title">
+          <text>教育经历</text>
+        </view>
+        <view class="personal_content">
+          <textarea name="jiaoyujigli" value="{{jiaoyujigli}}" maxlength='200' disabled='{{disabled}}' style="width: 80vw;margin-left: 10vw; color: #7e7e7e;">
+      <!-- 比较喜欢敲代码，对新技术以及语法新特性能够快速接受，并且掌握加以使用，平时爱读书，尤其喜欢JavaScript类的书籍 -->
+      </textarea>
+        </view>
+      </view>
+      <van-divider />
+
+
+      <!-- <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">保存</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view> -->
+      <view class="btn-area" wx:if="{{!disabled}}">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">保存</button>
+      </view>
+    </form>
+
+
+    <van-divider />
+    <view class="my_offic" wx:if="{{!disabled}}">预览我的简历</view>
+    <view class="my_offic" wx:if="{{!disabled}}">扫描登录网页端修改简历</view>
+    <view class="my_offic" wx:if="{{!disabled}}">简历导出</view>
+
+  </view>
+</view>

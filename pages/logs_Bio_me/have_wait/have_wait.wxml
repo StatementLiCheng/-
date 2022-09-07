@@ -1,0 +1,3 @@
+<!--pages/have_wait/have_wait.wxml-->
+<input type="text" class="wait_input" placeholder="认真的回答会带来大量的Get" />
+<button class="wait_button">发布</button>
